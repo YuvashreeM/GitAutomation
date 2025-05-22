@@ -56,7 +56,6 @@ main/
 
 - Run `mvn clean test verify -Pallure-report ` to generate the Allure report after the test case results once `testng.xml` is executed
 - The Allure report will be generated at: `target/allure-report/index.html`
-- [Sample report has been attached for your reference](https://github.com/YuvashreeM/GitAutomation/blob/main/target/allure-report/index.html)
 
 ************************************************************************************************************************************************************************************
 `
