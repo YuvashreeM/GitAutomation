@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Updating a file content to the existing file in the cloned Git repository","18","updateFile","Git Operations","Thu May 22 17:01:19 IST 2025","passed","Thu May 22 17:01:19 IST 2025","tests.gitTest","Git Operations Test","tests.gitTest","updateFile"
+"Adding a file to the cloned Git repository","53","addNewFile","Git Operations","Thu May 22 17:01:19 IST 2025","passed","Thu May 22 17:01:19 IST 2025","tests.gitTest","Git Operations Test","tests.gitTest","addNewFile"
