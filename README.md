@@ -13,7 +13,7 @@ This repository contains the source code to automate these 2 test cases:
 - Maven-based Java project structure is used
 - TestNG is used as the testing framework and Allure for reporting
 - Git repo will only be cloned if the provided repo is not cloned already in the provided directory
-- Git cloning operation will be skipped if directory already exists
+- Git cloning operation will be skipped if directory already exist
 
 ## How It Works
 
@@ -56,6 +56,7 @@ main/
 
 - Run `mvn clean test verify -Pallure-report ` to generate the Allure report after the test case results once `testng.xml` is executed
 - The Allure report will be generated at: `target/allure-report/index.html`
+- [Sample report has been attached for your reference](https://github.com/YuvashreeM/GitAutomation/blob/main/target/allure-report/index.html)
 
 ************************************************************************************************************************************************************************************
 `
