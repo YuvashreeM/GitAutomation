@@ -9,9 +9,7 @@ This repository contains the source code to automate these 2 test cases:
 - Java 11 or higher version is installed
 - Git CLI is installed and available in system PATH
 - Git credentials (via HTTPS or SSH) are already set up locally (cached or configured)
-- The repo has:
-  - At least one existing file named 'README.md'
-  - Write access granted to the user executing this script
+- User must have Write access to executing this script
 - Maven-based Java project structure is used
 - TestNG is used as the testing framework and Allure for reporting
 - Git repo will only be cloned if the provided repo is not cloned already in the provided directory
@@ -27,6 +25,29 @@ This repository contains the source code to automate these 2 test cases:
 - Uses TestNG as the test framework
 - All test cases of a class are included in `testng.xml` to execute in one go
 
+## Project Structure
+
+```
+seleniumJavaDemo/
+├── pom.xml
+├── README.md
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── pages/
+│   │           ├── gitPage.java
+│   │       └── utils/
+│   │           ├── gitUtils.java
+│   └── test/
+│       └── java/
+│           └── tests/
+│               ├── gitTest.java
+├── testng.xml
+└── target/
+    └── allure-report/
+        └── [Files related to Allure reports]
+```
+
 ## Run Instructions
 
 - Run `mvn clean test -DsuiteXmlFile=testng.xml` to execute all the test cases configured in `testng.xml`
@@ -37,3 +58,4 @@ This repository contains the source code to automate these 2 test cases:
 - The Allure report will be generated at: `target/allure-report/index.html`
 
 ************************************************************************************************************************************************************************************
+`
