@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project> xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
@@ -49,15 +50,34 @@
 
     <build>
         <plugins>
+            <!-- Surefire plugin to run tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <testFailureIgnore>false</testFailureIgnore>
+                    <systemPropertyVariables>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <!-- Clean plugin to clean allure folders before run -->
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${project.build.directory}/allure-results</directory>
+                        </fileset>
+                        <fileset>
+                            <directory>${project.build.directory}/allure-report</directory>
+                        </fileset>
+                    </filesets>
                 </configuration>
             </plugin>
         </plugins>
@@ -68,10 +88,15 @@
             <id>allure-report</id>
             <build>
                 <plugins>
+                    <!-- Allure Maven plugin to generate reports after tests -->
                     <plugin>
                         <groupId>io.qameta.allure</groupId>
                         <artifactId>allure-maven</artifactId>
                         <version>2.14.0</version>
+                        <configuration>
+                            <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+                            <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>allure-report</id>
@@ -86,4 +111,5 @@
             </build>
         </profile>
     </profiles>
+
 </project>
