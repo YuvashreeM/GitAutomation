@@ -1,0 +1,7 @@
+{
+  "repoUrl": "git@github.com:YuvashreeM/playwrightProjectDemo",
+  "newFileName": "testFileautomation.txt",
+  "newFileContent": "New file created for automation testing.\n",
+  "updatedFileContent": "Updated file content for automation testing.\n",
+  "deletedFileName": "testFileautomation.txt"
+}
