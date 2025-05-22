@@ -28,7 +28,7 @@ This repository contains the source code to automate these 2 test cases:
 ## Project Structure
 
 ```
-seleniumJavaDemo/
+main/
 ├── pom.xml
 ├── README.md
 ├── src/
