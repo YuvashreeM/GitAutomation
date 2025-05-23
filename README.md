@@ -10,14 +10,14 @@ This repository demonstrates a Git automation framework built using **Java**, **
 The following Git operations are automated and validated:
 
 1. **Add New File to a Git Repository**
-   - ✅ Clone the provided Git repository (if not already cloned).
-   - ✅ Create and add a new file with input-based filename and content.
-   - ✅ Commit and push the file to the remote repository.
+    - ✅ Clone the provided Git repository (if not already cloned).
+    - ✅ Create and add a new file with input-based filename and content.
+    - ✅ Commit and push the file to the remote repository.
 
 2. **Update Existing File in a Git Repository**
-   - ✅ Clone the provided Git repository (if not already cloned).
-   - ✅ Locate and append new content to the specified existing file.
-   - ✅ Commit and push the updated file to the remote repository.
+    - ✅ Clone the provided Git repository (if not already cloned).
+    - ✅ Locate and append new content to the specified existing file.
+    - ✅ Commit and push the updated file to the remote repository.
 
 ---
 
@@ -42,7 +42,6 @@ Ensure the following dependencies and configurations are available on your syste
 
 ## 📁 Project Structure
 
-\`\`\`bash
 gitAutomationFramework/
 │
 ├── pom.xml                          # Maven configuration
@@ -63,9 +62,8 @@ gitAutomationFramework/
 │               └── gitTest.java     # TestNG test cases
 │
 └── target/
-    └── allure-report/              # Allure report output directory
-\`\`\`
-
+└── allure-report/              # Allure report output directory
+└── allure-results/             # Allure results output directory
 ---
 
 ## 📌 Key Components
@@ -92,31 +90,25 @@ Defines the test suite and includes all test classes for execution in a batch.
 ### Step 1: **Run Test Suite**
 Use Maven to execute the configured TestNG suite:
 
-\`\`\`bash
-mvn clean test -DsuiteXmlFile=testng.xml
-\`\`\`
+```bash mvn clean test -DsuiteXmlFile=testng.xml```
 
 ### Step 2: **Generate and View Allure Report**
 After the test execution, generate the Allure report using:
 
-\`\`\`bash
-mvn clean test verify -Pallure-report
-\`\`\`
+```bash mvn clean test verify -Pallure-report```
 
 Then open the report located at:
 
-\`\`\`
-target/allure-report/index.html
-\`\`\`
+```target/allure-report/index.html```
 
 ---
 
 ## 📊 Reporting and Logging
 
 - **Allure Report**: Provides detailed visual feedback on test results including:
-  - Step-by-step logs
-  - Attachments
-  - Success/failure states
+    - Step-by-step logs
+    - Attachments
+    - Success/failure states
 
 ---
 
