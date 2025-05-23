@@ -91,16 +91,22 @@ Defines the test suite and includes all test classes for execution in a batch.
 ### Step 1: **Run Test Suite**
 Use Maven to execute the configured TestNG suite:
 
-```bash mvn clean test -DsuiteXmlFile=testng.xml```
+```bash 
+mvn clean test -DsuiteXmlFile=testng.xml
+```
 
 ### Step 2: **Generate and View Allure Report**
 After the test execution, generate the Allure report using:
 
-```bash mvn clean test verify -Pallure-report```
+```bash 
+mvn clean test verify -Pallure-report
+```
 
 Then open the report located at:
 
-```target/allure-report/index.html```
+```
+target/allure-report/index.html
+```
 
 ---
 
