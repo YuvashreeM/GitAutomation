@@ -41,7 +41,7 @@ Ensure the following dependencies and configurations are available on your syste
 ---
 
 ## 📁 Project Structure
-
+```bash
 gitAutomationFramework/
 │
 ├── pom.xml                          # Maven configuration
@@ -64,6 +64,7 @@ gitAutomationFramework/
 └── target/
 └── allure-report/              # Allure report output directory
 └── allure-results/             # Allure results output directory
+```
 ---
 
 ## 📌 Key Components
